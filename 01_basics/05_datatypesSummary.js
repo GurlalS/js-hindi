@@ -8,7 +8,7 @@ console.log(score); // 55
 console.log(result); //66
 
 /* 
-# Primitive => call by value
+# Primitive => call by value => Uses stack memory 
 
 let score = 55
 let result= score;
@@ -44,7 +44,7 @@ console.log(id === anotherId); // false
 
 
 /* 
-# Non Primitive or Reference Type
+# Non Primitive or Reference Type => Uses Heap Memory
 
 1. Array
 2. Objects
