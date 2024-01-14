@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body>
+   <h1>chai aur code</h1>
+   <button id="start">Start</button>
+   <button id="stop">Stop</button>
+</body>
+<script>
+/*
+
+Basic Understanding of JS setTimeout
+ // simple timeout funtion
+ setTimeout(function(){
+    console.log("In setTimeout fuction")
+ }, 2000)
+  
+   const printmsg = function(){
+    console.log("Message")
+   }
+
+    const message = setTimeout(printmsg,2000) // passing a function refernce in setTimout fuc
+
+    // if i want to stop the setTimeout Fucn before it got execuuted
+    // use the clearTimeout fuction => it requires the referncr of the which setTimeout u want to stop
+
+   
+    let stop = document.querySelector('#stop').addEventListener('click', function(e){
+             clearTimeout(message)
+             console.log("Stopped")
+    })
+    */ 
+
+/*
+   start and stop setinterval fuction with start and stop buttons
+*/ 
+function learningTimeout(message){
+    //console.log("Start Timeout")
+    console.log(`${message}`)
+}   
+
+let interval
+function startMessagePrint(){
+    console.log("Start")
+    if(!interval){
+        interval = setInterval(learningTimeout, 1000, "hii") // in setInterval, funaction parameter also we can pass
+    }
+    
+}
+function stopMessagePrint(){
+    clearInterval(interval);
+    console.log("Stopped")
+    interval = null
+}
+document.getElementById('start').addEventListener('click', startMessagePrint)
+document.getElementById('stop').addEventListener('click', stopMessagePrint)
+</script>
+</html>
